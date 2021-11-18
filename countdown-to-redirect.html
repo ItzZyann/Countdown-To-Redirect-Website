@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Countdown to Redirect...</title>
+</head>
+<body>
+<p>You will redirect after 10 seconds</p>
+
+ <span id="countdown">10</span>seconds
+
+<script>
+//Second
+//If you want to change this to minutes, just make the minutes to seconds, like just convert it.
+
+var seconds = 10;
+
+function countdown() {
+   seconds = seconds - 1;
+   if (seconds < 0) {
+     //Web Url Here: Edit here if you want...
+     window.location = "http://www.google.com"
+   } else {
+     document.getElementById("countdown").innerHTML = seconds;
+     window.setTimeout("countdown()", 1000);
+   }
+}
+
+//Dont forget this shit
+countdown();
+</script>
+</body>
+</html>
